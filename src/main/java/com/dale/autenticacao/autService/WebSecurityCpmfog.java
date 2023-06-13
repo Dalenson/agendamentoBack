@@ -57,7 +57,7 @@ public class WebSecurityCpmfog extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST,"/api/usuarios/login", "/api/usuarios")
+                .antMatchers("/api/usuarios/login", "/api/usuarios", "/websocket/**", "/websocket/")
                 .permitAll()
                 .anyRequest()
                 .authenticated();
